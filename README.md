@@ -6,3 +6,8 @@
 * Radio,Checbox,Combobox,Textbox,NotificationBox
 * Responsive frame
 * Onclick event
+
+**Library_Class_Exerise :**
+* Class,Constructor,Attributes,Properties,Instances,Getter and Setter
+* Try Catch,Exception
+* Tuple,List and Dictionary
