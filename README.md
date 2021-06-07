@@ -2,7 +2,7 @@
 -------------------------
 **Tkinter_Gui_Exercise.py :**
  
-![Tkinter_Gui_Exercise.py](pictures\Tkinter_Gui_Exercise.py.png)
+![Tkinter_Gui_Exercise.py](./pictures/Tkinter_Gui_Exercise.py.png?raw=true)
 * Radio,Checkbox,Combobox,Textbox,NotificationBox
 * Responsive frame
 * Onclick event
