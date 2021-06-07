@@ -29,10 +29,8 @@ def okay():
     
     mb.showinfo('Information','Fullname: %s\nResidency: %s\nProgram: %s\nCourse: \n%s'%(fullname,status,programs,courseS))
 
-
 def exit():
     window.destroy()
-
 
 # Let's create the Tkinter window.
 window = tk.Tk()
@@ -49,14 +47,12 @@ center_frame.pack(fill=tk.X,expand=tk.YES)
 btm_frame = tk.Frame(master=window, height=60, bg="#9B90C2")
 btm_frame.pack(fill=tk.X)
 
-
 # Center left and right columns
 center_frame1 = tk.Frame(center_frame,width=25, height=250)
 center_frame1.pack(fill=tk.X,side=tk.LEFT,expand=True)
 
 center_frame2 = tk.Frame(center_frame,width=150, height=250)
 center_frame2.pack(fill=tk.X,side=tk.LEFT,expand=True)
-
 
 # Bottom 3 columns
 btm_frame1 = tk.Frame(btm_frame,width=66, height=60, bg="#622954")
@@ -100,7 +96,6 @@ ProgramC.place(x=10,y=130,relwidth=0.8)
 programVar = tk.IntVar(value=1)
 WebVar = tk.IntVar()
 softwareVar = tk.IntVar()
-
 ProgrammingC = tk.Checkbutton(center_frame2,text='Programming I',anchor='w',variable=programVar,state=NORMAL, offvalue=0).place(x=10,y=170,relwidth=0.8)
 WebC = tk.Checkbutton(center_frame2,text='Web Page Design',anchor='w',variable=WebVar, offvalue=0).place(x=10,y=190,relwidth=0.8)
 SoftwareC = tk.Checkbutton(center_frame2,text='Software Engineering',anchor='w',variable=softwareVar, offvalue=0).place(x=10,y=210,relwidth=0.8)
