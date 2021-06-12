@@ -40,26 +40,20 @@ class Library(object):
           self.__books.update(newBook)
 
   def loan(self, loan_info: tuple) -> None:
-    # If it is not present an Exception is raised.
-    if (loan_info[1] in self.__books):
-      # If it is present but there are no copies available, then also raise an Exception.
-      if (self.__books[loan_info[1]]['copies'])<1:
-        raise ValueError('No more copies of %s\n'%(loan_info[1]))
-      # If it is present and at least one copy is available in the library.
+    
+    if (loan_info[1] in self.__books):                              # If it is not present an Exception is raised.
+      if (self.__books[loan_info[1]]['copies'])<1:                  # If it is present but there are no copies available, then also raise an Exception.
+        raise ValueError('No more copies of %s\n'%(loan_info[1]))   # If it is present and at least one copy is available in the library.
       else:
               self.__books[loan_info[1]]['copies']-=1
               print('Loaning one copy of %s' %(self.__books[loan_info[1]]['title']))
-           
       newLoan = tuple(list(loan_info))
       self.__loans.append(newLoan)
-     
     else:
       raise ValueError('%s not available in the library'%(loan_info[1]))
 
-  def take_back(self, book_info: tuple) -> None:
-    # If it is present    
-    # That tuple is deleted from the __loans collection. Then the number of copies is increased by one.
-    searchResult=0
+  def take_back(self, book_info: tuple) -> None:    # If it is present    
+    searchResult=0                                  # That tuple is deleted from the __loans collection. Then the number of copies is increased by one.                      
     temp=()
     for x in self.__loans:
       if (book_info[0] in x[0]):
@@ -73,8 +67,7 @@ class Library(object):
     if (searchResult==1):
       self.__loans.remove(temp)
       self.__books[book_info[1]]['copies']+=1
-    # If it is not present, then an Exception is raised.
-    else:
+    else:                                          # If it is not present, then an Exception is raised.
       raise ValueError (book_info,' is not valid loan')
 
 #-----------------------------
