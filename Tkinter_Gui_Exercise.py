@@ -1,6 +1,6 @@
 import tkinter as tk
-from tkinter import StringVar, ttk
-from tkinter.constants import ANCHOR, BOTH, NORMAL
+from tkinter import ttk
+from tkinter.constants import NORMAL
 from tkinter import messagebox as mb
 
 # On click Method
@@ -32,12 +32,12 @@ def okay():
 def exit():
     window.destroy()
 
-# Let's create the Tkinter window.
+# Create the Tkinter window.
 window = tk.Tk()
 window.title("Centennial College")
 window.minsize(350,360)
 
-# You will first create a division with the help of Frame class and align them on TOP and BOTTOM with pack() method.
+# Create a division with the help of Frame class and align them on TOP and BOTTOM with pack() method.
 top_frame = tk.Frame(master=window, height=50, bg="#9B90C2")
 top_frame.pack(fill=tk.X)
 

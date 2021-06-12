@@ -31,6 +31,7 @@ class Library(object):
     x+="\nLoans\n"+str(self.__loans)+"\n"
     return x
 
+  # Method
   def add(self,book_info:dict)-> None:     
         newBook={book_info.get('isbn') :{'title': book_info.get('book').get('title'), 'author': book_info.get('book').get('author'),'copies': book_info.get('book').get('copies')}}
         if book_info.get('isbn') in self.__books.keys():
@@ -39,12 +40,12 @@ class Library(object):
           self.__books.update(newBook)
 
   def loan(self, loan_info: tuple) -> None:
-    # a.	If it is not present an Exception is raised. See the output for the message.
+    # If it is not present an Exception is raised.
     if (loan_info[1] in self.__books):
-      # b.	If it is present but there are no copies available, then also raise an Exception.
+      # If it is present but there are no copies available, then also raise an Exception.
       if (self.__books[loan_info[1]]['copies'])<1:
         raise ValueError('No more copies of %s\n'%(loan_info[1]))
-      # c.	If it is present and at least one copy is available in the library, do the following:
+      # If it is present and at least one copy is available in the library.
       else:
               self.__books[loan_info[1]]['copies']-=1
               print('Loaning one copy of %s' %(self.__books[loan_info[1]]['title']))
@@ -56,10 +57,8 @@ class Library(object):
       raise ValueError('%s not available in the library'%(loan_info[1]))
 
   def take_back(self, book_info: tuple) -> None:
-
-    # a.	If it is present    
-    # o	That tuple is deleted from the __loans collection
-    # o	And, then the number of copies is increased by one.
+    # If it is present    
+    # That tuple is deleted from the __loans collection. Then the number of copies is increased by one.
     searchResult=0
     temp=()
     for x in self.__loans:
@@ -74,54 +73,55 @@ class Library(object):
     if (searchResult==1):
       self.__loans.remove(temp)
       self.__books[book_info[1]]['copies']+=1
-    #b.	If it is not present, then an Exception is raised. See output for the message.
+    # If it is not present, then an Exception is raised.
     else:
       raise ValueError (book_info,' is not valid loan')
 
 #-----------------------------
 #        Test harness 
 #-----------------------------
-#Testing the __init__ and the __str__ methods of the Library class
+
+# Testing the __init__ and the __str__ methods of the Library class
 progress = Library()
 print(f'\nActual books in the library')
 print(progress) #shows 6 books
 
-#verifying that the books property returns a copy and not the actual
-#book collection items of the class
+# Verifying that the books property returns a copy and not the actual
+# Book collection items of the class
 print('Testing the books property')
 local = progress.books
 print(local)
 
-#creating a new book
-isbn = 1007    #add one value to the dic
+# Creating a new book
+isbn = 1007    # Add one value to the dic
 book = {'title': 'Client-Side Javascript', 'author': 'Vodkin', 'copies': 6}
 print(f'\nAdding {isbn} {book} to the local copy')
 local[isbn] = book
 print(local)
 
 print(f'\nActual books in the library')
-print(progress) #still show 6 books
+print(progress) # Still show 6 books
 
-abook = {}              #create an empty dic
-abook['isbn'] = isbn    #add an isbn key-value to the dic
-abook['book'] = book    #add an book key-value to the dic
+abook = {}              # Create an empty dic
+abook['isbn'] = isbn    # Add an isbn key-value to the dic
+abook['book'] = book    # Add an book key-value to the dic
 print(f'\nAdding a new book {abook}')
 progress.add(abook)
-print(progress)         #shows 7 books
+print(progress)         # Show 7 books
 
 abook.clear()
 abook ['isbn'] = 1001
 abook['book'] = {'title': 'Introduction to Programming', 'author': 'Farell', 'copies': 1}
 print(f'\nAdding a single copy of an existing book {abook}')
 progress.add(abook)
-print(progress)       #number of copies of '1001' goes up by 1
+print(progress)       # Number of copies of '1001' goes up by 1
 
 abook.clear()
 abook ['isbn'] = 1002
 abook['book'] = {'title': 'Database Concepts', 'author': 'Morris', 'copies': 5}
 print(f'\nAdding multiple copies of an existing book {abook}')
 progress.add(abook)
-print(progress)       #number of copies of '1002' goes up by 5
+print(progress)       # Number of copies of '1002' goes up by 5
 
 # Borrowing a book
 info = ('Arielle', 1001, 'may-03-2021')
