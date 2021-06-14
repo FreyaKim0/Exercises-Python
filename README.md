@@ -1,5 +1,5 @@
 # Exercises-Python
-**[Exercise 1] Tkinter_Gui_Exercise.py :**
+**[Exercise 1] Tkinter_Gui_Exercise.py :**<br>
 This is tkinter gui practice. In this program:
 * End user may select name, residency, program, courses.
 * Reset and Exit buttons will perform their function.
@@ -12,7 +12,7 @@ Practice scope:
 * Radio,Checkbox,Combobox,Textbox,NotificationBox
 * Responsive frame
 * Onclick event
-
+---------------------------------------------------------------------------------
 **[Exercise 2] Library_Class_Exerise.py :**
 This is a library class. In this class:
 * End user may select name, residency, program, courses.
