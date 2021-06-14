@@ -13,7 +13,7 @@ Practice scope:
 * Responsive frame
 * Onclick event
 ---------------------------------------------------------------------------------
-**[Exercise 1] Library_Class_Exerise.py **<br><br>
+**[Exercise 1] Library_Class_Exerise.py**<br><br>
 This is a library class. In this class:
 * End user may select name, residency, program, courses.
 * Reset and Exit buttons will perform their function.
