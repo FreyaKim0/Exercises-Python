@@ -9,7 +9,7 @@ In this program:
 ![Tkinter_Gui_Exercise.py](./pictures/Tkinter_Gui_Exercise.py.png?raw=true)
 
 Practice scope:
-* Radio,Checkbox,Combobox,Textbox,NotificationBox
+* Radio, Checkbox, Combobox, Textbox and NotificationBox.
 * Responsive frame
 * Onclick event
 ---------------------------------------------------------------------------------
@@ -20,4 +20,4 @@ In this class:
 Practice scope:
 * Class, Constructor, Attributes, Properties, Instances, Getter and Setter.
 * Try Catch, Exception.
-* Tuple,List and Dictionary.
+* Tuple, List and Dictionary.
