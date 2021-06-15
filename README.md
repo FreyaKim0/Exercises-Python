@@ -19,5 +19,5 @@ In this class:
 
 Practice scope:
 * Class, Constructor, Attributes, Properties, Instances, Getter and Setter.
-* Try Catch, Exception.
-* Tuple, List and Dictionary.
+* Try Catch, Exception
+* Tuple, List and Dictionary
