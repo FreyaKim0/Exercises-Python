@@ -27,14 +27,14 @@ def okay():
     if(softwareVar.get()==1):
         courseS+='software Engineering\n'
     
-    mb.showinfo('Information','Fullname: %s\nResidency: %s\nProgram: %s\nCourse: \n%s'%(fullname,status,programs,courseS))
+    mb.showinfo('Information','Fullname:  %s\nResidency:  %s\nProgram:  %s\nCourse:  %s'%(fullname,status,programs,courseS))
 
 def exit():
     window.destroy()
 
 # Create the Tkinter window.
 window = tk.Tk()
-window.title("Centennial College")
+window.title("Exercise 2")
 window.minsize(350,360)
 
 # Create a division with the help of Frame class and align them on TOP and BOTTOM with pack() method.
@@ -48,10 +48,10 @@ btm_frame = tk.Frame(master=window, height=60, bg="#9B90C2")
 btm_frame.pack(fill=tk.X)
 
 # Center left and right columns
-center_frame1 = tk.Frame(center_frame,width=25, height=250)
+center_frame1 = tk.Frame(center_frame,width=25, height=200)
 center_frame1.pack(fill=tk.X,side=tk.LEFT,expand=True)
 
-center_frame2 = tk.Frame(center_frame,width=150, height=250)
+center_frame2 = tk.Frame(center_frame,width=150, height=200)
 center_frame2.pack(fill=tk.X,side=tk.LEFT,expand=True)
 
 # Bottom 3 columns
@@ -75,14 +75,14 @@ Courses = tk.Label(center_frame1,text='Courses : ',anchor='w',font='Verdana 10',
 
 # Selections input - Text
 FullNameInput = tk.Entry(center_frame2,font='Verdana 10',bg='white')
-FullNameInput.defaultValue='XuTung Jin'
+FullNameInput.defaultValue='Freya Kim'
 FullNameInput.insert(tk.END,FullNameInput.defaultValue)
-FullNameInput.place(x=10,y=50,relwidth=0.8)
+FullNameInput.place(x=10,y=20,relwidth=0.8)
 
 # Selections input - Radio
 ResidencyS = tk.StringVar(None,"Domestic")
-DomesticR = tk.Radiobutton(center_frame2,font='Verdana 10',tristatevalue=0,text='Domestic',anchor='w',variable=ResidencyS,value='Domestic').place(x=10,y=75,relwidth=0.8)
-InternationalR = tk.Radiobutton(center_frame2,font='Verdana 10',tristatevalue=0,text='International',anchor='w',variable=ResidencyS,value='International').place(x=10,y=95,relwidth=0.8)
+DomesticR = tk.Radiobutton(center_frame2,font='Verdana 10',tristatevalue=0,text='Domestic',anchor='w',variable=ResidencyS,value='Domestic').place(x=10,y=50,relwidth=0.8)
+InternationalR = tk.Radiobutton(center_frame2,font='Verdana 10',tristatevalue=0,text='International',anchor='w',variable=ResidencyS,value='International').place(x=10,y=70,relwidth=0.8)
 
 # Selections input - Combo Box
 n=tk.StringVar()
@@ -90,15 +90,15 @@ ProgramC = ttk.Combobox(center_frame2,textvariable=n)
 ProgramC['values']=('AI','Gaming','Health','Software')
 ProgramC.current(2)
 ProgramC.grid(column=1,row=4)
-ProgramC.place(x=10,y=130,relwidth=0.8)
+ProgramC.place(x=10,y=100,relwidth=0.8)
 
 # Selections input - Check Box
 programVar = tk.IntVar(value=1)
 WebVar = tk.IntVar()
 softwareVar = tk.IntVar()
-ProgrammingC = tk.Checkbutton(center_frame2,text='Programming I',anchor='w',variable=programVar,state=NORMAL, offvalue=0).place(x=10,y=170,relwidth=0.8)
-WebC = tk.Checkbutton(center_frame2,text='Web Page Design',anchor='w',variable=WebVar, offvalue=0).place(x=10,y=190,relwidth=0.8)
-SoftwareC = tk.Checkbutton(center_frame2,text='Software Engineering',anchor='w',variable=softwareVar, offvalue=0).place(x=10,y=210,relwidth=0.8)
+ProgrammingC = tk.Checkbutton(center_frame2,text='Programming I',anchor='w',variable=programVar,state=NORMAL, offvalue=0).place(x=10,y=140,relwidth=0.8)
+WebC = tk.Checkbutton(center_frame2,text='Web Page Design',anchor='w',variable=WebVar, offvalue=0).place(x=10,y=160,relwidth=0.8)
+SoftwareC = tk.Checkbutton(center_frame2,text='Software Engineering',anchor='w',variable=softwareVar, offvalue=0).place(x=10,y=180,relwidth=0.8)
 
 # Buttons
 reset = tk.Button(btm_frame1,text='Reset',anchor='s',padx=5,pady=5,command=reset).place(x=10 , y=15 ,relwidth=0.8)
