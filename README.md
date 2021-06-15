@@ -1,7 +1,7 @@
 # Exercises-Python
 **[Exercise 2] Tkinter_Gui_Exercise.py**<br><br>
 In this program:
-* End user may select name, residency, program, courses.
+* End user may select name, residency, program and courses.
 * Reset and Exit buttons will perform their function.
 * Information box will open and display user inputs when Okay button is clicked. 
 * The window is responsive.
@@ -15,12 +15,9 @@ Practice scope:
 ---------------------------------------------------------------------------------
 **[Exercise 1] Library_Class_Exerise.py**<br><br>
 In this class:
-* End user may select name, residency, program, courses.
-* Reset and Exit buttons will perform their function.
-* Information box will open and display user inputs when Okay button is clicked. 
-* The window is responsive.
+* End user may add, loan, and take back books.
 
 Practice scope:
-* Class,Constructor,Attributes,Properties,Instances,Getter and Setter
-* Try Catch,Exception
-* Tuple,List and Dictionary
+* Class, Constructor, Attributes, Properties, Instances, Getter and Setter.
+* Try Catch, Exception.
+* Tuple,List and Dictionary.
