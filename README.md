@@ -1,6 +1,6 @@
 # Exercises-Python
 **[Exercise 2] Tkinter_Gui_Exercise.py**<br><br>
-This is tkinter gui practice. In this program:
+In this program:
 * End user may select name, residency, program, courses.
 * Reset and Exit buttons will perform their function.
 * Information box will open and display user inputs when Okay button is clicked. 
@@ -14,7 +14,7 @@ Practice scope:
 * Onclick event
 ---------------------------------------------------------------------------------
 **[Exercise 1] Library_Class_Exerise.py**<br><br>
-This is a library class. In this class:
+In this class:
 * End user may select name, residency, program, courses.
 * Reset and Exit buttons will perform their function.
 * Information box will open and display user inputs when Okay button is clicked. 
