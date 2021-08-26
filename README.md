@@ -5,7 +5,7 @@ In this program:
 * Detect corrupt and mutate datas
 * Publisher passing radom datas to subscribers through broker
 
-![Tkinter_Gui_Exercise.py](./pictures/mttq.py.png?raw=true)
+![Tkinter_Gui_Exercise.py](./pictures/mqtt.py.gif?raw=true)
 
 Practice scope:
 * Eclipse mosquito broker 
