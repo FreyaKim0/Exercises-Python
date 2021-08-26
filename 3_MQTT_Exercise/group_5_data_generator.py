@@ -1,16 +1,18 @@
 import random
 import time
 
+
+# DataGenerator class
 class DataGenerator:
-    # Generate radom values
-    def __init__(self, curr_val=0, frequency=20, min=0, max=1, size=400):
+    # Constructor of the class with some default values
+    def __init__(self, curr_val=0, frequency=10, min=0, max=1, size=500):
         self.__value = {
-            'curr_val': curr_val,
-            'frequency': frequency,  
+            'curr_val': curr_val,  # Current data value
+            'frequency': frequency,  # Frequency of the peak
             'val_to_mult': 1}  # Value to multiply to the random value which will be added
-        self.__max = max 
-        self.__min = min 
-        self.__size = size 
+        self.__max = max  # Max value of the data
+        self.__min = min  # Min value of the data
+        self.__size = size  # Number of the data to generate
 
     # Private method that generates data
     def __generate_values(self):
@@ -43,7 +45,9 @@ class DataGenerator:
     def values(self):
         return [self.__generate_values() for _ in range(self.__size)]
 
+
 curr_val = DataGenerator(min=15, max=40, size=1).values[0]
+
 
 # Create data
 def create_data(date, location):
