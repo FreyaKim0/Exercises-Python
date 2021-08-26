@@ -1,5 +1,5 @@
 # Exercises-Python
-**[Exercise 3] MQTT implementation**<br><br>
+**[Exercise 3] MQTT exercise**<br><br>
 This is a group project. In this program:
 * Data generator produces radom datas 
 * Detect corrupt and mutate datas
